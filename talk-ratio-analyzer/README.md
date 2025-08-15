@@ -59,7 +59,6 @@ The Talk-to-Listen Ratio Analyzer transforms Read AI meeting transcripts into ac
 ### Setup
 
 ```bash
-
 # Clone the command repository
 
 git clone https://github.com/yourusername/commands.git
@@ -79,7 +78,6 @@ claude-code mcp install zapier
 ### Basic Analysis
 
 ```bash
-
 # Analyze a single meeting
 
 /talk-ratio-analyzer meeting_identifier="Q4 Discovery Call - Enterprise"
@@ -93,7 +91,6 @@ claude-code mcp install zapier
 ### Comparative Analysis
 
 ```bash
-
 # Compare multiple reps over time
 
 /talk-ratio-analyzer \
@@ -119,7 +116,6 @@ date_range="2025-07-01 to 2025-07-31"
 ### Historical Analysis
 
 ```bash
-
 # Full historical analysis with correlations
 
 /talk-ratio-analyzer \
@@ -137,7 +133,6 @@ output_format=markdown
 ### Advanced Options
 
 ```bash
-
 # JSON export for integration
 
 /talk-ratio-analyzer \
@@ -165,15 +160,11 @@ coaching_report=yes
 ### Markdown Report
 
 ```
-
 talk-ratio-analysis-[timestamp]/
 
 ├── report.md                 # Comprehensive analysis report
-
 ├── coaching-recommendations.md # Detailed coaching plans
-
 ├── top-performer-playbook.md  # Best practices extraction
-
 └── data.json                  # Optional raw data export
 
 ```
