@@ -71,7 +71,6 @@ The Competitive Intelligence Analyzer is an advanced AI-powered tool that extrac
 1. **Clone or Download**
 
 ```bash
-
 # If adding to existing Commands.com repository
 
 cd your-commands-repo
@@ -80,7 +79,7 @@ cp -r competitive-intelligence ./
 
 ```
 
-1. **Configure MCP Servers**
+2. **Configure MCP Servers**
 
 Ensure the following MCP servers are installed and configured:
 
@@ -88,11 +87,11 @@ Ensure the following MCP servers are installed and configured:
 - Zapier MCP with Google Drive connection
 - Filesystem MCP (usually pre-installed)
 
-3\. **Update commands.yaml**
+3. **Update commands.yaml**
 
 The command entry will be automatically added to your commands.yaml file
 
-4\. **Verify Access**
+4. **Verify Access**
 
 Test access to your Read AI transcripts folder in Google Drive
 
@@ -101,7 +100,6 @@ Test access to your Read AI transcripts folder in Google Drive
 ### Basic Usage
 
 ```bash
-
 # Analyze a single meeting
 
 /competitive-intelligence meeting_identifier="Q4 Sales Call - Enterprise"
@@ -119,7 +117,6 @@ Test access to your Read AI transcripts folder in Google Drive
 ### Advanced Usage
 
 ```bash
-
 # Comprehensive analysis with all features
 
 /competitive-intelligence \
@@ -167,25 +164,15 @@ output_format=json
 ## Parameters
 
 | Parameter | Type | Default | Description |
-
-|-----------|------|---------|-------------|
-
-| `meeting_identifier` | string | required\* | Name or ID of specific meeting to analyze |
-
+| --- | --- | --- | --- |
+| `meeting_identifier` | string | required* | Name or ID of specific meeting to analyze |
 | `drive_folder` | string | "AI Labs/Meeting Notes (Read AI)" | Google Drive folder path |
-
 | `date_range` | string | - | Date range for batch analysis (YYYY-MM-DD to YYYY-MM-DD) |
-
 | `competitors` | string | auto-detect | Comma-separated list of competitors to track |
-
 | `analysis_depth` | enum | comprehensive | Level of analysis: comprehensive, standard, quick |
-
 | `focus_areas` | string | all | Analysis focus: mentions, features, pricing, positioning, all |
-
 | `win_loss_correlation` | boolean | yes | Correlate with deal outcomes |
-
 | `generate_battlecard` | boolean | yes | Generate battle card updates |
-
 | `output_format` | enum | markdown | Output format: markdown, json, html, all |
 
 * Either `meeting_identifier` or `date_range` must be provided
@@ -197,17 +184,12 @@ The command generates a comprehensive analysis package:
 ### Output Structure
 
 ```
-
 ./competitive-intelligence-[timestamp]/
 
 ├── competitive-intelligence-report.md    # Main analysis report
-
 ├── battle-cards-update.md               # Battle card recommendations
-
 ├── training-recommendations.md          # Sales training guide
-
 ├── product-insights.md                  # Product development insights
-
 └── data.json                            # Raw data (if requested)
 
 ```
@@ -219,25 +201,25 @@ The command generates a comprehensive analysis package:
 - Competitive threat assessment
 - Action priorities
 
-2\. **Competitor Analysis**
+2. **Competitor Analysis**
 
 - Mention frequency and context
 - Trend analysis
 - Competitive positioning
 
-3\. **Sales Effectiveness**
+3. **Sales Effectiveness**
 
 - Response scoring
 - Best practices
 - Improvement areas
 
-4\. **Win/Loss Insights**
+4. **Win/Loss Insights**
 
 - Statistical correlation
 - Critical success factors
 - Risk indicators
 
-5\. **Actionable Recommendations**
+5. **Actionable Recommendations**
 
 - Battle card updates
 - Training priorities
@@ -283,18 +265,18 @@ The command generates a comprehensive analysis package:
 - Run weekly or monthly to track trends
 - Analyze immediately after important competitive deals
 
-2\. **Comprehensive Coverage**
+2. **Comprehensive Coverage**
 
 - Include all customer-facing meetings
 - Don't limit to just "competitive" calls
 
-3\. **Action Orientation**
+3. **Action Orientation**
 
 - Share battle card updates with entire team
 - Implement training recommendations promptly
 - Feed insights to product team regularly
 
-4\. **Data Quality**
+4. **Data Quality**
 
 - Ensure Read AI transcripts are complete
 - Verify meeting outcomes are documented
