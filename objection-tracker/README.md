@@ -274,4 +274,4 @@ This command is proprietary software. All rights reserved.
 
 ---
 
-*Built with Claude Code and MCP integration for advanced sales intelligence*
+*Copyright © 2025 AlphaPoint.com*

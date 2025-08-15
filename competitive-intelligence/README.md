@@ -346,4 +346,4 @@ MIT License - See LICENSE file for details
 
 ---
 
-*Built for Commands.com by AI-powered automation*
+*Copyright © 2025 AlphaPoint.com*

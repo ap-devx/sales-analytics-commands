@@ -320,4 +320,4 @@ MIT License - See LICENSE file for details
 
 ---
 
-*Built with Claude Code and Commands.com*
+*Copyright © 2025 AlphaPoint.com*

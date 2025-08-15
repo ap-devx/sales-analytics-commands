@@ -255,4 +255,4 @@ This command is available through Commands.com subscription. Usage is subject to
 
 ---
 
-*Powered by Commands.com MCP Integration*
+*Copyright © 2025 AlphaPoint.com*
