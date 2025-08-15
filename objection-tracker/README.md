@@ -58,7 +58,6 @@ The **Objection Tracker** is an advanced AI-powered command that analyzes sales 
 1. **Clone the Repository**
 
 ```bash
-
 git clone https://github.com/yourusername/objection-tracker.git
 
 cd objection-tracker
