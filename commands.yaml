@@ -147,7 +147,7 @@ commands:
         label: "Google Drive Folder"
         description: "Folder path containing Read AI meeting transcripts"
         type: "text"
-        required: false
+        required: true
         defaultValue: "AI Labs/Meeting Notes (Read AI)"
       
       - name: "date_range"
