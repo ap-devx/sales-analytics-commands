@@ -295,10 +295,6 @@ Compatible with:
 - **50 Meetings**: 5-8 minutes
 - **100+ Meetings**: 10-15 minutes
 
-## License
-
-MIT License. All rights reserved.
-
 ## Changelog
 
 ### Version 1.0.0 (2025-08-13)
@@ -310,6 +306,10 @@ MIT License. All rights reserved.
 - Deal outcome correlation
 - Coaching recommendations
 - Top performer technique extraction
+
+## License
+
+MIT License. All rights reserved.
 
 ---
 
