@@ -261,16 +261,9 @@ based on similar clients who saw 40% efficiency gains..."
 
 - **Solution**: Focus on training for top 3 objection categories
 
-## Support
-
-For issues or feature requests, please contact:
-
-- Email: support@your-company.com
-- Documentation: [https://docs.your-company.com/objection-tracker](https://docs.your-company.com/objection-tracker)
-
 ## License
 
-This command is proprietary software. All rights reserved.
+MIT License. All rights reserved.
 
 ---
 

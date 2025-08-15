@@ -245,13 +245,9 @@ Structured data output for:
 1. **Team Sharing**: Share insights with sales teams for collective improvement
 1. **Follow-up Actions**: Use recommendations to guide next interactions
 
-## Support
-
-For issues or feature requests, please contact the command creator through Commands.com or submit feedback via the platform.
-
 ## License
 
-This command is available through Commands.com subscription. Usage is subject to Commands.com terms of service.
+MIT License. All rights reserved.
 
 ---
 

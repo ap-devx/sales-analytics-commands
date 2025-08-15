@@ -295,16 +295,9 @@ Compatible with:
 - **50 Meetings**: 5-8 minutes
 - **100+ Meetings**: 10-15 minutes
 
-## Support
-
-For issues or feature requests, please contact:
-
-- GitHub Issues: [github.com/yourusername/commands/issues](https://github.com/yourusername/commands/issues)
-- Email: support@yourcompany.com
-
 ## License
 
-MIT License - See LICENSE file for details
+MIT License. All rights reserved.
 
 ## Changelog
 

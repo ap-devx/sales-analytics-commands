@@ -327,22 +327,13 @@ The command generates a comprehensive analysis package:
 
 - **Solution**: Process in smaller date ranges or use quick analysis mode
 
-## Support
-
-For issues or feature requests:
-
-1. Check the command logs for detailed error messages
-1. Verify all MCP servers are properly configured
-1. Ensure Google Drive permissions are correctly set
-1. Contact support with specific error details and transcript samples
-
-## License
-
-MIT License - See LICENSE file for details
-
 ## Version History
 
 - **v1.0.0** (2025-08-13): Initial release with full competitive intelligence capabilities
+
+## License
+
+MIT License. All rights reserved.
 
 ---
 
