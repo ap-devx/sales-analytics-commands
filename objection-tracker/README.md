@@ -64,7 +64,7 @@ cd objection-tracker
 
 ```
 
-1. **Configure MCP Servers**
+2. **Configure MCP Servers**
 
 Ensure the following MCP servers are installed and configured:
 
@@ -72,7 +72,7 @@ Ensure the following MCP servers are installed and configured:
 - Zapier MCP for Google Drive integration
 - Filesystem MCP for local file operations
 
-3\. **Set Google Drive Permissions**
+3. **Set Google Drive Permissions**
 
 - Grant access to folders containing Read AI transcripts
 - Default folder: "AI Labs/Meeting Notes (Read AI)"
@@ -82,7 +82,6 @@ Ensure the following MCP servers are installed and configured:
 ### Basic Command
 
 ```bash
-
 /objection-tracker meeting_identifier="Q4 Sales Call - Acme Corp"
 
 ```
@@ -92,7 +91,6 @@ Ensure the following MCP servers are installed and configured:
 #### Analyze Multiple Meetings
 
 ```bash
-
 /objection-tracker
 
 date_range="2025-01-01 to 2025-08-31"
@@ -106,7 +104,6 @@ generate_playbook=yes
 #### Compare Sales Rep Performance
 
 ```bash
-
 /objection-tracker
 
 rep_names="John Smith,Jane Doe,Mike Johnson"
@@ -120,7 +117,6 @@ output_format=markdown
 #### Focus on Specific Objections
 
 ```bash
-
 /objection-tracker
 
 meeting_identifier="Product Demo - TechCorp"
@@ -134,43 +130,27 @@ resolution_threshold=80
 ## Parameters
 
 | Parameter | Type | Default | Description |
-
-|-----------|------|---------|-------------|
-
-| `meeting_identifier` | string | required | Meeting name or ID to analyze |
-
-| `drive_folder` | string | "AI Labs/Meeting Notes (Read AI)" | Google Drive folder path |
-
-| `date_range` | string | - | Date range for multiple meetings (YYYY-MM-DD to YYYY-MM-DD) |
-
-| `rep_names` | string | - | Comma-separated list of sales reps |
-
-| `analysis_mode` | enum | single | Analysis type: single, comparative, historical |
-
-| `objection_focus` | string | - | Specific objection types to focus on |
-
-| `output_format` | enum | markdown | Output format: markdown, json, html |
-
-| `generate_playbook` | boolean | yes | Generate objection-handling playbook |
-
-| `resolution_threshold` | number | 70 | Minimum acceptable resolution rate (%) |
+| --- | --- | --- | --- |
+| meeting_identifier | string | required | Meeting name or ID to analyze |
+| drive_folder | string | "AI Labs/Meeting Notes (Read AI)" | Google Drive folder path |
+| date_range | string | - | Date range for multiple meetings (YYYY-MM-DD to YYYY-MM-DD) |
+| rep_names | string | - | Comma-separated list of sales reps |
+| analysis_mode | enum | single | Analysis type: single, comparative, historical |
+| objection_focus | string | - | Specific objection types to focus on |
+| output_format | enum | markdown | Output format: markdown, json, html |
+| generate_playbook | boolean | yes | Generate objection-handling playbook |
+| resolution_threshold | number | 70 | Minimum acceptable resolution rate (%) |
 
 ## Output Structure
 
 ### Generated Files
 
 ```
-
 objection-analysis-[date]/
-
 ├── objection-analysis-report.md     # Main analysis report
-
 ├── objection-handling-playbook.md   # Actionable playbook
-
 ├── training-recommendations.md      # Training plans
-
 └── objection-data.json             # Raw data (optional)
-
 ```
 
 ### Report Sections
@@ -186,9 +166,7 @@ objection-analysis-[date]/
 
 ### Objection Analysis Sample
 
-```markdown
-
-## Budget/Pricing Objections
+### Budget/Pricing Objections
 
 - **Frequency**: 23 occurrences (38% of total)
 - **Resolution Rate**: 65%
@@ -196,31 +174,18 @@ objection-analysis-[date]/
 
 ### Top Objection: "Too expensive compared to current solution"
 
-**Best Response Template**:
-
-"I understand cost is important. Let me show you the ROI calculation
-
-based on similar clients who saw 40% efficiency gains..."
+**Best Response Template**:"I understand cost is important. Let me show you the ROI calculation based on similar clients who saw 40% efficiency gains..."
 
 **Success Rate**: 78% when using ROI data
 
-```
 
 ### Rep Performance Matrix
 
-```markdown
-
 | Sales Rep | Resolution Rate | Strength | Development Area |
-
-|-----------|----------------|----------|------------------|
-
-| John S.   | 82%           | Pricing  | Competition      |
-
-| Jane D.   | 75%           | Trust    | Timeline         |
-
-| Mike J.   | 68%           | Features | Pricing          |
-
-```
+| --- | --- | --- | --- |
+| John S. | 82% | Pricing | Competition |
+| Jane D. | 75% | Trust | Timeline |
+| Mike J. | 68% | Features | Pricing |
 
 ## Best Practices
 
