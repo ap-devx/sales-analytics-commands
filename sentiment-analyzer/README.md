@@ -33,7 +33,6 @@ claude mcp add --transport http sentiment-analyzer https://api.commands.com/mcp/
 ### Basic Usage
 
 ```bash
-
 /sentiment-analyzer
 
 ```
@@ -43,7 +42,6 @@ This will prompt you to select a meeting report from your default folder.
 ### Specify a Meeting Report
 
 ```bash
-
 /sentiment-analyzer report_name="Q4 Sales Call - Acme Corp"
 
 ```
@@ -51,7 +49,6 @@ This will prompt you to select a meeting report from your default folder.
 ### Custom Folder Location
 
 ```bash
-
 /sentiment-analyzer drive_folder="Sales Team/Meeting Reports" report_name="Product Demo - TechCorp"
 
 ```
@@ -59,7 +56,6 @@ This will prompt you to select a meeting report from your default folder.
 ### Quick Analysis Mode
 
 ```bash
-
 /sentiment-analyzer report_name="Weekly Standup" analysis_depth=quick
 
 ```
@@ -67,7 +63,6 @@ This will prompt you to select a meeting report from your default folder.
 ### Export as JSON
 
 ```bash
-
 /sentiment-analyzer report_name="Client Review" output_format=json
 
 ```
@@ -125,17 +120,11 @@ Structured data output for:
 ## Configuration Options
 
 | Parameter | Options | Default | Description |
-
-|-----------|---------|---------|-------------|
-
+| --- | --- | --- | --- |
 | `report_name` | Meeting title or "auto-select" | auto-select | Specific report to analyze |
-
 | `drive_folder` | Folder path | AI Labs/Meeting Notes (Read AI) | Google Drive folder location |
-
 | `analysis_depth` | comprehensive, standard, quick | comprehensive | Level of analysis detail |
-
 | `output_format` | markdown, json, both | markdown | Report format |
-
 | `include_recommendations` | yes, no | yes | Include coaching suggestions |
 
 ## Analysis Depth Levels
@@ -184,8 +173,6 @@ Structured data output for:
 
 ## Example Output
 
-```markdown
-
 # Sentiment Analysis Report: Q4 Sales Call - Acme Corp
 
 **Date**: 2024-12-15
@@ -208,8 +195,6 @@ Structured data output for:
 - Recommendation: Lead with ROI metrics earlier
 
 [... detailed analysis continues ...]
-
-```
 
 ## Troubleshooting
 
