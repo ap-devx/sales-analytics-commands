@@ -1,54 +1,54 @@
-﻿\# Talk-to-Listen Ratio Analyzer
+﻿# Talk-to-Listen Ratio Analyzer
 
 Advanced conversation dynamics analyzer for Read AI meeting transcripts that measures sales effectiveness through talk-to-listen ratios, question quality, and outcome correlation.
 
-\## Overview
+## Overview
 
 The Talk-to-Listen Ratio Analyzer transforms Read AI meeting transcripts into actionable insights about conversation dynamics. It calculates precise talk-to-listen ratios, evaluates question effectiveness, segments analysis by call type, and correlates patterns with deal outcomes to identify coaching opportunities and extract top performer techniques.
 
-\## Key Features
+## Key Features
 
-\### 📊 Talk-to-Listen Ratio Analysis
+### Talk-to-Listen Ratio Analysis
 
-- \*\*Precise Calculation\*\*: Measures exact percentage of sales rep vs customer speaking time
-- \*\*Word Count Analysis\*\*: Tracks total words spoken by each party
-- \*\*Segment Analysis\*\*: Analyzes average segment length and conversation flow
-- \*\*Time Estimation\*\*: Calculates estimated speaking duration based on word count
+- **Precise Calculation**: Measures exact percentage of sales rep vs customer speaking time
+- **Word Count Analysis**: Tracks total words spoken by each party
+- **Segment Analysis**: Analyzes average segment length and conversation flow
+- **Time Estimation**: Calculates estimated speaking duration based on word count
 
-\### ❓ Question Effectiveness Assessment
+### Question Effectiveness Assessment
 
-- \*\*Question Classification\*\*: Identifies open-ended vs closed questions
-- \*\*Response Measurement\*\*: Tracks customer response length for each question type
-- \*\*Effectiveness Scoring\*\*: Calculates question quality score (0-100)
-- \*\*Pattern Recognition\*\*: Identifies successful questioning techniques
+- **Question Classification**: Identifies open-ended vs closed questions
+- **Response Measurement**: Tracks customer response length for each question type
+- **Effectiveness Scoring**: Calculates question quality score (0-100)
+- **Pattern Recognition**: Identifies successful questioning techniques
 
-\### 📈 Call Type Segmentation
+### Call Type Segmentation
 
-- \*\*Optimal Ratios by Type\*\*:
+- **Optimal Ratios by Type**:
 - Discovery: 30/70 (rep/customer)
 - Demo: 50/50
 - Negotiation: 40/60
 - Closing: 35/65
-- \*\*Deviation Analysis\*\*: Measures alignment with optimal ratios
-- \*\*Contextual Recommendations\*\*: Provides call-type specific improvement suggestions
+- **Deviation Analysis**: Measures alignment with optimal ratios
+- **Contextual Recommendations**: Provides call-type specific improvement suggestions
 
-\### 💰 Deal Outcome Correlation
+### Deal Outcome Correlation
 
-- \*\*Win Rate Analysis\*\*: Correlates talk ratios with successful deals
-- \*\*Statistical Insights\*\*: Identifies optimal ranges for winning deals
-- \*\*Pattern Discovery\*\*: Finds conversation patterns that predict success
-- \*\*Predictive Metrics\*\*: Develops benchmarks for future calls
+- **Win Rate Analysis**: Correlates talk ratios with successful deals
+- **Statistical Insights**: Identifies optimal ranges for winning deals
+- **Pattern Discovery**: Finds conversation patterns that predict success
+- **Predictive Metrics**: Develops benchmarks for future calls
 
-\### 🎯 Coaching Intelligence
+### Coaching Intelligence
 
-- \*\*Priority Identification\*\*: Flags reps needing immediate coaching
-- \*\*Strength Recognition\*\*: Highlights top performers and their techniques
-- \*\*Personalized Plans\*\*: Generates individual improvement action plans
-- \*\*Team Analytics\*\*: Provides team-wide performance insights
+- **Priority Identification**: Flags reps needing immediate coaching
+- **Strength Recognition**: Highlights top performers and their techniques
+- **Personalized Plans**: Generates individual improvement action plans
+- **Team Analytics**: Provides team-wide performance insights
 
-\## Installation
+## Installation
 
-\### Prerequisites
+### Prerequisites
 
 1. Claude Code CLI with MCP support
 1. Required MCP servers:
@@ -56,115 +56,115 @@ The Talk-to-Listen Ratio Analyzer transforms Read AI meeting transcripts into ac
 - `zapier` - For Google Drive integration
 - `filesystem` - For local report generation
 
-\### Setup
+### Setup
 
-\```bash
+```bash
 
-\# Clone the command repository
+# Clone the command repository
 
 git clone https://github.com/yourusername/commands.git
 
 cd commands
 
-\# Ensure MCP servers are configured
+# Ensure MCP servers are configured
 
 claude-code mcp install google-docs-mcp
 
 claude-code mcp install zapier
 
-\```
+```
 
-\## Usage
+## Usage
 
-\### Basic Analysis
+### Basic Analysis
 
-\```bash
+```bash
 
-\# Analyze a single meeting
+# Analyze a single meeting
 
-/talk-ratio-analyzer meeting\_identifier="Q4 Discovery Call - Enterprise"
+/talk-ratio-analyzer meeting_identifier="Q4 Discovery Call - Enterprise"
 
-\# Quick analysis without coaching report
+# Quick analysis without coaching report
 
-/talk-ratio-analyzer meeting\_identifier="Product Demo" coaching\_report=no
+/talk-ratio-analyzer meeting_identifier="Product Demo" coaching_report=no
 
-\```
+```
 
-\### Comparative Analysis
+### Comparative Analysis
 
-\```bash
+```bash
 
-\# Compare multiple reps over time
-
-/talk-ratio-analyzer \
-
-date\_range="2025-01-01 to 2025-08-31" \
-
-rep\_names="John Smith,Jane Doe,Mike Wilson" \
-
-analysis\_mode=comparative
-
-\# Focus on specific call types
+# Compare multiple reps over time
 
 /talk-ratio-analyzer \
 
-call\_types="discovery,demo" \
+date_range="2025-01-01 to 2025-08-31" \
 
-rep\_names="Sarah Johnson" \
+rep_names="John Smith,Jane Doe,Mike Wilson" \
 
-date\_range="2025-07-01 to 2025-07-31"
+analysis_mode=comparative
 
-\```
-
-\### Historical Analysis
-
-\```bash
-
-\# Full historical analysis with correlations
+# Focus on specific call types
 
 /talk-ratio-analyzer \
 
-analysis\_mode=historical \
+call_types="discovery,demo" \
 
-outcome\_correlation=yes \
+rep_names="Sarah Johnson" \
 
-coaching\_report=yes \
+date_range="2025-07-01 to 2025-07-31"
 
-output\_format=markdown
+```
 
-\```
+### Historical Analysis
 
-\### Advanced Options
+```bash
 
-\```bash
-
-\# JSON export for integration
+# Full historical analysis with correlations
 
 /talk-ratio-analyzer \
 
-meeting\_identifier="Strategic Account Review" \
+analysis_mode=historical \
 
-question\_analysis=yes \
+outcome_correlation=yes \
 
-output\_format=json
+coaching_report=yes \
 
-\# Batch processing with custom folder
+output_format=markdown
+
+```
+
+### Advanced Options
+
+```bash
+
+# JSON export for integration
 
 /talk-ratio-analyzer \
 
-drive\_folder="Sales/Transcripts/Q4" \
+meeting_identifier="Strategic Account Review" \
 
-date\_range="2025-10-01 to 2025-12-31" \
+question_analysis=yes \
 
-coaching\_report=yes
+output_format=json
 
-\```
+# Batch processing with custom folder
 
-\## Output Structure
+/talk-ratio-analyzer \
 
-\### Markdown Report
+drive_folder="Sales/Transcripts/Q4" \
 
-\```
+date_range="2025-10-01 to 2025-12-31" \
+
+coaching_report=yes
+
+```
+
+## Output Structure
+
+### Markdown Report
+
+```
 
 talk-ratio-analysis-[timestamp]/
 
@@ -176,94 +176,94 @@ talk-ratio-analysis-[timestamp]/
 
 └── data.json                  # Optional raw data export
 
-\```
+```
 
-\### Report Sections
+### Report Sections
 
-1. \*\*Executive Summary\*\*: Key findings and metrics
-1. \*\*Talk Ratio Analysis\*\*: Detailed breakdown by rep and meeting
-1. \*\*Question Effectiveness\*\*: Analysis of questioning techniques
-1. \*\*Call Type Alignment\*\*: Performance against optimal ratios
-1. \*\*Deal Correlation\*\*: Statistical analysis of outcomes
-1. \*\*Coaching Priorities\*\*: Ranked list of improvement areas
-1. \*\*Top Techniques\*\*: Extracted best practices from top performers
-1. \*\*Individual Reports\*\*: Personalized analysis for each rep
-1. \*\*Action Items\*\*: Specific next steps and recommendations
+1. **Executive Summary**: Key findings and metrics
+1. **Talk Ratio Analysis**: Detailed breakdown by rep and meeting
+1. **Question Effectiveness**: Analysis of questioning techniques
+1. **Call Type Alignment**: Performance against optimal ratios
+1. **Deal Correlation**: Statistical analysis of outcomes
+1. **Coaching Priorities**: Ranked list of improvement areas
+1. **Top Techniques**: Extracted best practices from top performers
+1. **Individual Reports**: Personalized analysis for each rep
+1. **Action Items**: Specific next steps and recommendations
 
-\## Metrics Explained
+## Metrics Explained
 
-\### Talk-to-Listen Ratio
+### Talk-to-Listen Ratio
 
-- \*\*Calculation\*\*: (Rep Words / Total Words) × 100
-- \*\*Optimal Ranges\*\*: Varies by call type (see segmentation above)
-- \*\*Red Flags\*\*: >70% rep talking in discovery, <30% in demos
+- **Calculation**: (Rep Words / Total Words) × 100
+- **Optimal Ranges**: Varies by call type (see segmentation above)
+- **Red Flags**: >70% rep talking in discovery, <30% in demos
 
-\### Question Effectiveness Score
+### Question Effectiveness Score
 
-- \*\*Components\*\*:
+- **Components**:
 - Open-ended question ratio (50% weight)
 - Average response length (50% weight)
-- \*\*Scoring\*\*:
+- **Scoring**:
 - 80-100: Excellent consultative approach
 - 60-79: Good questioning skills
 - 40-59: Needs improvement
 - <40: Requires immediate coaching
 
-\### Alignment Score
+### Alignment Score
 
-- \*\*Calculation\*\*: 100 - |Actual Ratio - Optimal Ratio|
-- \*\*Interpretation\*\*:
+- **Calculation**: 100 - |Actual Ratio - Optimal Ratio|
+- **Interpretation**:
 - 90-100: Excellent alignment
 - 75-89: Good alignment
 - 60-74: Moderate alignment
 - <60: Poor alignment
 
-\## Best Practices
+## Best Practices
 
-\### For Discovery Calls
+### For Discovery Calls
 
 - Aim for 30% talk time
 - Use 80% open-ended questions
 - Average 3+ follow-up questions per topic
 - Listen for 45+ seconds before responding
 
-\### For Demo Calls
+### For Demo Calls
 
 - Maintain 50/50 balance
 - Check for understanding every 2-3 minutes
 - Ask engagement questions throughout
 - Pause for questions after each feature
 
-\### For Negotiations
+### For Negotiations
 
 - Target 40% talk time
 - Focus on clarifying questions
 - Summarize agreements frequently
 - Let customer express concerns fully
 
-\## Troubleshooting
+## Troubleshooting
 
-\### Common Issues
+### Common Issues
 
-\*\*Issue\*\*: Cannot access Google Drive files
+**Issue**: Cannot access Google Drive files
 
-- \*\*Solution\*\*: Ensure Zapier MCP is properly authenticated with Google Drive permissions
+- **Solution**: Ensure Zapier MCP is properly authenticated with Google Drive permissions
 
-\*\*Issue\*\*: Rep names not recognized
+**Issue**: Rep names not recognized
 
-- \*\*Solution\*\*: Provide exact names as they appear in transcripts, comma-separated
+- **Solution**: Provide exact names as they appear in transcripts, comma-separated
 
-\*\*Issue\*\*: Call type not detected
+**Issue**: Call type not detected
 
-- \*\*Solution\*\*: Manually specify call\_types parameter or ensure transcript titles include type
+- **Solution**: Manually specify call_types parameter or ensure transcript titles include type
 
-\*\*Issue\*\*: Slow processing for large date ranges
+**Issue**: Slow processing for large date ranges
 
-- \*\*Solution\*\*: Process in monthly batches or increase timeout settings
+- **Solution**: Process in monthly batches or increase timeout settings
 
-\## Integration
+## Integration
 
-\### CRM Integration
+### CRM Integration
 
 Export JSON data for integration with:
 
@@ -272,7 +272,7 @@ Export JSON data for integration with:
 - Pipedrive
 - Custom CRM systems
 
-\### Coaching Platforms
+### Coaching Platforms
 
 Compatible with:
 
@@ -281,34 +281,34 @@ Compatible with:
 - ExecVision
 - Custom LMS systems
 
-\### Reporting Tools
+### Reporting Tools
 
 - Tableau
 - Power BI
 - Google Data Studio
 - Custom dashboards
 
-\## Performance Benchmarks
+## Performance Benchmarks
 
-- \*\*Single Meeting\*\*: 30-60 seconds
-- \*\*10 Meetings\*\*: 2-3 minutes
-- \*\*50 Meetings\*\*: 5-8 minutes
-- \*\*100+ Meetings\*\*: 10-15 minutes
+- **Single Meeting**: 30-60 seconds
+- **10 Meetings**: 2-3 minutes
+- **50 Meetings**: 5-8 minutes
+- **100+ Meetings**: 10-15 minutes
 
-\## Support
+## Support
 
 For issues or feature requests, please contact:
 
 - GitHub Issues: [github.com/yourusername/commands/issues](https://github.com/yourusername/commands/issues)
 - Email: support@yourcompany.com
 
-\## License
+## License
 
 MIT License - See LICENSE file for details
 
-\## Changelog
+## Changelog
 
-\### Version 1.0.0 (2025-08-13)
+### Version 1.0.0 (2025-08-13)
 
 - Initial release
 - Full talk-to-listen ratio analysis
@@ -318,6 +318,6 @@ MIT License - See LICENSE file for details
 - Coaching recommendations
 - Top performer technique extraction
 
-\---
+---
 
-* Built with Claude Code and Commands.com\*
+*Built with Claude Code and Commands.com*

@@ -1,8 +1,8 @@
-﻿\# Read AI Meeting Sentiment Analyzer
+﻿# Read AI Meeting Sentiment Analyzer
 
 An advanced AI-powered tool for analyzing sentiment patterns in Read AI meeting reports stored in Google Drive. This command provides comprehensive insights into customer sentiment, sales representative performance, and critical conversation dynamics.
 
-\## 🎯 Purpose
+## Purpose
 
 Transform your Read AI meeting recordings into actionable business intelligence by:
 
@@ -12,87 +12,87 @@ Transform your Read AI meeting recordings into actionable business intelligence 
 - Generating coaching recommendations for improved outcomes
 - Cross-referencing patterns with historical deal success rates
 
-\## 🚀 Installation
+## Installation
 
-\```bash
+```bash
 
 claude mcp add --transport http sentiment-analyzer https://api.commands.com/mcp/[your-username]/sentiment-analyzer
 
-\```
+```
 
-\## 📋 Prerequisites
+## Prerequisites
 
-1. \*\*Google Drive Access\*\*: Ensure you have access to the Google Drive containing Read AI meeting reports
-1. \*\*MCP Servers Required\*\*:
+1. **Google Drive Access**: Ensure you have access to the Google Drive containing Read AI meeting reports
+1. **MCP Servers Required**:
 - `gdrive` - For accessing Google Drive files
 - `filesystem` - For saving analysis reports
 - `sequentialthinking` - For advanced sentiment analysis
 
-\## 💡 Usage
+## Usage
 
-\### Basic Usage
+### Basic Usage
 
-\```bash
+```bash
 
 /sentiment-analyzer
 
-\```
+```
 
 This will prompt you to select a meeting report from your default folder.
 
-\### Specify a Meeting Report
+### Specify a Meeting Report
 
-\```bash
+```bash
 
-/sentiment-analyzer report\_name="Q4 Sales Call - Acme Corp"
+/sentiment-analyzer report_name="Q4 Sales Call - Acme Corp"
 
-\```
+```
 
-\### Custom Folder Location
+### Custom Folder Location
 
-\```bash
+```bash
 
-/sentiment-analyzer drive\_folder="Sales Team/Meeting Reports" report\_name="Product Demo - TechCorp"
+/sentiment-analyzer drive_folder="Sales Team/Meeting Reports" report_name="Product Demo - TechCorp"
 
-\```
+```
 
-\### Quick Analysis Mode
+### Quick Analysis Mode
 
-\```bash
+```bash
 
-/sentiment-analyzer report\_name="Weekly Standup" analysis\_depth=quick
+/sentiment-analyzer report_name="Weekly Standup" analysis_depth=quick
 
-\```
+```
 
-\### Export as JSON
+### Export as JSON
 
-\```bash
+```bash
 
-/sentiment-analyzer report\_name="Client Review" output\_format=json
+/sentiment-analyzer report_name="Client Review" output_format=json
 
-\```
+```
 
-\## 📊 What You'll Get
+## What You'll Get
 
-\### Sentiment Scores
+### Sentiment Scores
 
-- \*\*Customer Sentiment (1-10)\*\*: Measures engagement and receptiveness
-- \*\*Sales Rep Confidence (1-10)\*\*: Evaluates presenter effectiveness
-- \*\*Deal Probability\*\*: High/Medium/Low assessment based on patterns
+- **Customer Sentiment (1-10)**: Measures engagement and receptiveness
+- **Sales Rep Confidence (1-10)**: Evaluates presenter effectiveness
+- **Deal Probability**: High/Medium/Low assessment based on patterns
 
-\### Critical Moments Analysis
+### Critical Moments Analysis
 
-- \*\*Objection Handling\*\*: How well concerns were addressed
-- \*\*Pricing Discussions\*\*: Reaction to cost and value proposition
-- \*\*Product Demonstrations\*\*: Engagement level and interest indicators
+- **Objection Handling**: How well concerns were addressed
+- **Pricing Discussions**: Reaction to cost and value proposition
+- **Product Demonstrations**: Engagement level and interest indicators
 
-\### Coaching Recommendations
+### Coaching Recommendations
 
-- \*\*Tone Improvements\*\*: Specific suggestions for better communication
-- \*\*Product Positioning\*\*: Insights on features that resonate
-- \*\*Pricing Strategy\*\*: Feedback on value presentation
+- **Tone Improvements**: Specific suggestions for better communication
+- **Product Positioning**: Insights on features that resonate
+- **Pricing Strategy**: Feedback on value presentation
 
-\### Timeline Visualization
+### Timeline Visualization
 
 Visual representation of sentiment changes throughout the meeting with:
 
@@ -100,9 +100,9 @@ Visual representation of sentiment changes throughout the meeting with:
 - Trigger identification for sentiment shifts
 - Missed opportunity flags
 
-\## 🎨 Output Formats
+## Output Formats
 
-\### Markdown Report (Default)
+### Markdown Report (Default)
 
 A comprehensive, formatted report with sections for:
 
@@ -113,7 +113,7 @@ A comprehensive, formatted report with sections for:
 - Deal Risk Assessment
 - Historical Pattern Comparison
 
-\### JSON Export
+### JSON Export
 
 Structured data output for:
 
@@ -122,25 +122,25 @@ Structured data output for:
 - Programmatic analysis
 - Data warehousing
 
-\## ⚙️ Configuration Options
+## Configuration Options
 
 | Parameter | Options | Default | Description |
 
-\|-----------|---------|---------|-------------|
+|-----------|---------|---------|-------------|
 
-| `report\_name` | Meeting title or "auto-select" | auto-select | Specific report to analyze |
+| `report_name` | Meeting title or "auto-select" | auto-select | Specific report to analyze |
 
-| `drive\_folder` | Folder path | AI Labs/Meeting Notes (Read AI) | Google Drive folder location |
+| `drive_folder` | Folder path | AI Labs/Meeting Notes (Read AI) | Google Drive folder location |
 
-| `analysis\_depth` | comprehensive, standard, quick | comprehensive | Level of analysis detail |
+| `analysis_depth` | comprehensive, standard, quick | comprehensive | Level of analysis detail |
 
-| `output\_format` | markdown, json, both | markdown | Report format |
+| `output_format` | markdown, json, both | markdown | Report format |
 
-| `include\_recommendations` | yes, no | yes | Include coaching suggestions |
+| `include_recommendations` | yes, no | yes | Include coaching suggestions |
 
-\## 📈 Analysis Depth Levels
+## Analysis Depth Levels
 
-\### Comprehensive (Default)
+### Comprehensive (Default)
 
 - Full transcript analysis
 - Linguistic pattern detection
@@ -148,60 +148,60 @@ Structured data output for:
 - Predictive insights
 - Detailed coaching recommendations
 
-\### Standard
+### Standard
 
 - Core sentiment scoring
 - Key moment identification
 - Basic recommendations
 - Summary insights
 
-\### Quick
+### Quick
 
 - Rapid sentiment overview
 - High-level scores
 - Top 3 recommendations
 - Executive summary only
 
-\## 🔍 Key Features
+## Key Features
 
-\### Sentiment Evolution Tracking
+### Sentiment Evolution Tracking
 
 - Maps emotional journey throughout the conversation
 - Identifies inflection points and their causes
 - Correlates sentiment with specific topics
 
-\### Pattern Recognition
+### Pattern Recognition
 
 - Compares against successful deal patterns
 - Identifies recurring objection themes
 - Highlights effective sales techniques
 
-\### Actionable Insights
+### Actionable Insights
 
 - Specific phrases to improve or avoid
 - Optimal follow-up timing recommendations
 - Risk mitigation strategies
 
-\## 📝 Example Output
+## Example Output
 
-\```markdown
+```markdown
 
-\# Sentiment Analysis Report: Q4 Sales Call - Acme Corp
+# Sentiment Analysis Report: Q4 Sales Call - Acme Corp
 
-\*\*Date\*\*: 2024-12-15
+**Date**: 2024-12-15
 
-\*\*Duration\*\*: 45 minutes
+**Duration**: 45 minutes
 
-\## Executive Summary
+## Executive Summary
 
 - Overall Customer Sentiment: 7.5/10 ↑
 - Sales Rep Confidence: 8/10
 - Deal Probability: High
 - Key Recommendation: Schedule technical deep-dive within 48 hours
 
-\## Critical Moments
+## Critical Moments
 
-\### Pricing Discussion (15:30)
+### Pricing Discussion (15:30)
 
 - Sentiment dropped from 8 to 6
 - Recovery through value demonstration
@@ -209,50 +209,50 @@ Structured data output for:
 
 [... detailed analysis continues ...]
 
-\```
+```
 
-\## 🛠️ Troubleshooting
+## Troubleshooting
 
-\### Common Issues
+### Common Issues
 
-\*\*Report Not Found\*\*
+**Report Not Found**
 
 - Verify the exact meeting title
 - Check folder permissions in Google Drive
 - Use auto-select mode to see available reports
 
-\*\*Access Denied\*\*
+**Access Denied**
 
 - Ensure Google Drive MCP server is properly configured
 - Verify you have read access to the folder
 
-\*\*Incomplete Analysis\*\*
+**Incomplete Analysis**
 
 - Check if the meeting report contains transcript data
 - Ensure sufficient content for analysis (minimum 10 minutes)
 
-\## 🔐 Privacy & Security
+## Privacy & Security
 
 - All analysis is performed locally through MCP servers
 - No data is sent to external services
 - Reports are saved to your local filesystem
 - Google Drive access is read-only
 
-\## 📚 Best Practices
+## Best Practices
 
-1. \*\*Regular Analysis\*\*: Analyze key meetings within 24 hours for timely coaching
-1. \*\*Pattern Building\*\*: Analyze multiple meetings to identify trends
-1. \*\*Team Sharing\*\*: Share insights with sales teams for collective improvement
-1. \*\*Follow-up Actions\*\*: Use recommendations to guide next interactions
+1. **Regular Analysis**: Analyze key meetings within 24 hours for timely coaching
+1. **Pattern Building**: Analyze multiple meetings to identify trends
+1. **Team Sharing**: Share insights with sales teams for collective improvement
+1. **Follow-up Actions**: Use recommendations to guide next interactions
 
-\## 🤝 Support
+## Support
 
 For issues or feature requests, please contact the command creator through Commands.com or submit feedback via the platform.
 
-\## 📄 License
+## License
 
 This command is available through Commands.com subscription. Usage is subject to Commands.com terms of service.
 
-\---
+---
 
-* Powered by Commands.com MCP Integration\*
+*Powered by Commands.com MCP Integration*
