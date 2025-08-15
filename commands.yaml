@@ -14,7 +14,7 @@ commands:
     type: command
     display_name: "Read AI Meeting Sentiment Analyzer"
     description: "Advanced sentiment analysis tool for Read AI meeting reports in Google Drive. Analyzes customer sentiment, sales representative confidence, and identifies key moments of sentiment shifts during discussions."
-    category: data-analytics
+    category: data-analysis
     content: "./sentiment-analyzer/command.md"
     tags:
       - sentiment-analysis
@@ -115,7 +115,7 @@ commands:
     type: command
     title: "Competitive Intelligence Analyzer"
     description: "Advanced competitive intelligence tool that analyzes Read AI meeting transcripts from Google Drive to track competitor mentions, assess differentiation strategies, correlate with win/loss outcomes, and generate actionable insights for sales enablement and product positioning."
-    category: sales-intelligence
+    category: data-analysis
     commandName: "/competitive-intelligence"
     aiPlatform: "claude-code@2025.06"
     content: "competitive-intelligence/command.md"
@@ -282,7 +282,7 @@ commands:
     type: command
     title: "Talk-to-Listen Ratio Analyzer"
     description: "Advanced conversation dynamics analyzer that calculates talk-to-listen ratios from Read AI meeting transcripts, measures question effectiveness, segments by call type, and correlates patterns with deal outcomes to identify coaching opportunities."
-    category: sales-intelligence
+    category: data-analysis
     commandName: "/talk-ratio-analyzer"
     aiPlatform: "claude-code@2025.06"
     content: "talk-ratio-analyzer/command.md"
@@ -454,7 +454,7 @@ commands:
     type: command
     title: "Sales Objection Tracker & Analyzer"
     description: "Advanced objection analysis tool that extracts, categorizes, and analyzes customer objections from Read AI sales meeting transcripts. Identifies patterns, measures resolution rates, compares rep strategies, and generates comprehensive playbooks with training recommendations."
-    category: sales-intelligence
+    category: data-analysis
     commandName: "/objection-tracker"
     aiPlatform: "claude-code@2025.06"
     content: "objection-tracker/command.md"
