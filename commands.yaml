@@ -1,0 +1,611 @@
+# Commands.com Repository Configuration
+# This file defines all commands available in this repository
+# For submission to Commands.com
+
+metadata:
+  version: "1.0.0"
+  created_at: "2025-08-13"
+  updated_at: "2025-08-13"
+  author: "devarsh.panchal@alphapoint.com"
+  total_commands: 4
+
+commands:
+  - name: sentiment-analyzer
+    type: command
+    display_name: "Read AI Meeting Sentiment Analyzer"
+    description: "Advanced sentiment analysis tool for Read AI meeting reports in Google Drive. Analyzes customer sentiment, sales representative confidence, and identifies key moments of sentiment shifts during discussions."
+    category: data-analytics
+    content: "./sentiment-analyzer/command.md"
+    tags:
+      - sentiment-analysis
+      - sales-intelligence
+      - meeting-analysis
+      - coaching
+      - google-drive
+      - read-ai
+    version: "1.0.0"
+    author: "devarsh.panchal@alphapoint.com"
+    
+    # MCP Configuration
+    mcp_servers:
+      - gdrive
+      - filesystem
+      - sequentialthinking
+    
+    # Command Structure
+    command_file: "./sentiment-analyzer/command.md"
+    readme_file: "./sentiment-analyzer/README.md"
+    
+    # Parameters Schema
+    parameters:
+      report_name:
+        type: string
+        description: "Name of the meeting report to analyze"
+        default: "auto-select"
+        required: false
+      
+      drive_folder:
+        type: string
+        description: "Google Drive folder path containing Read AI reports"
+        default: "AI Labs/Meeting Notes (Read AI)"
+        required: false
+      
+      analysis_depth:
+        type: enum
+        options: ["comprehensive", "standard", "quick"]
+        description: "Level of analysis detail"
+        default: "comprehensive"
+        required: false
+      
+      output_format:
+        type: enum
+        options: ["markdown", "json", "both"]
+        description: "Format for the analysis report"
+        default: "markdown"
+        required: false
+      
+      include_recommendations:
+        type: boolean
+        description: "Include coaching recommendations in the report"
+        default: true
+        required: false
+    
+    # Feature Capabilities
+    capabilities:
+      - "Sentiment scoring (1-10 scale) for customers and sales reps"
+      - "Critical moment detection during objections and pricing"
+      - "Pattern recognition across deal outcomes"
+      - "Coaching recommendations for tone improvement"
+      - "Timeline visualization of sentiment changes"
+      - "Cross-reference with historical patterns"
+      - "Export to markdown and JSON formats"
+    
+    # Usage Examples
+    examples:
+      - description: "Analyze a specific meeting report"
+        command: '/sentiment-analyzer report_name="Q4 Sales Call - Acme Corp"'
+      
+      - description: "Quick analysis with recommendations"
+        command: "/sentiment-analyzer analysis_depth=quick include_recommendations=yes"
+      
+      - description: "Export comprehensive analysis as JSON"
+        command: '/sentiment-analyzer report_name="Product Demo" output_format=json analysis_depth=comprehensive'
+    
+    # Requirements
+    requirements:
+      - "Access to Google Drive with Read AI meeting reports"
+      - "Read permissions for the specified folder"
+      - "MCP servers: gdrive, filesystem, sequentialthinking"
+    
+    # Output
+    output:
+      primary: "Markdown report with sentiment analysis"
+      secondary: "Optional JSON export for integration"
+      location: "Local filesystem with meeting title as filename"
+    
+    # Performance Metrics
+    estimated_runtime: "2-5 minutes depending on meeting length"
+    complexity: "advanced"
+    
+    # Status
+    status: "stable"
+    last_updated: "2025-08-13"
+
+  - name: competitive-intelligence
+    type: command
+    title: "Competitive Intelligence Analyzer"
+    description: "Advanced competitive intelligence tool that analyzes Read AI meeting transcripts from Google Drive to track competitor mentions, assess differentiation strategies, correlate with win/loss outcomes, and generate actionable insights for sales enablement and product positioning."
+    category: sales-intelligence
+    commandName: "/competitive-intelligence"
+    aiPlatform: "claude-code@2025.06"
+    content: "competitive-intelligence/command.md"
+    readme: "competitive-intelligence/README.md"
+    license: "MIT"
+    
+    # MCP Requirements
+    mcpRequirements:
+      - serverId: "google-docs-mcp"
+        tier: "required"
+        name: "Google Docs MCP"
+      - serverId: "zapier"
+        tier: "required"
+        name: "Zapier MCP"
+      - serverId: "filesystem"
+        tier: "required"
+        name: "Filesystem MCP"
+    
+    # Input Parameters
+    inputParameters:
+      - name: "meeting_identifier"
+        label: "Meeting Name or ID"
+        description: "Specific meeting to analyze from Read AI transcripts"
+        type: "text"
+        required: true
+        defaultValue: ""
+      
+      - name: "drive_folder"
+        label: "Google Drive Folder"
+        description: "Folder path containing Read AI meeting transcripts"
+        type: "text"
+        required: false
+        defaultValue: "AI Labs/Meeting Notes (Read AI)"
+      
+      - name: "date_range"
+        label: "Date Range"
+        description: "Date range for analyzing multiple meetings (YYYY-MM-DD to YYYY-MM-DD)"
+        type: "text"
+        required: false
+        defaultValue: ""
+      
+      - name: "competitors"
+        label: "Competitors"
+        description: "Comma-separated list of competitors to track (auto-detect if not specified)"
+        type: "text"
+        required: false
+        defaultValue: ""
+      
+      - name: "analysis_depth"
+        label: "Analysis Depth"
+        description: "Level of analysis detail"
+        type: "select"
+        required: false
+        defaultValue: "comprehensive"
+        options:
+          - "comprehensive"
+          - "standard"
+          - "quick"
+      
+      - name: "focus_areas"
+        label: "Focus Areas"
+        description: "Specific areas to analyze"
+        type: "text"
+        required: false
+        defaultValue: "all"
+      
+      - name: "win_loss_correlation"
+        label: "Win/Loss Correlation"
+        description: "Analyze correlation with deal outcomes"
+        type: "select"
+        required: false
+        defaultValue: "yes"
+        options:
+          - "yes"
+          - "no"
+      
+      - name: "generate_battlecard"
+        label: "Generate Battle Card"
+        description: "Create battle card updates"
+        type: "select"
+        required: false
+        defaultValue: "yes"
+        options:
+          - "yes"
+          - "no"
+      
+      - name: "output_format"
+        label: "Output Format"
+        description: "Format for the analysis report"
+        type: "select"
+        required: false
+        defaultValue: "markdown"
+        options:
+          - "markdown"
+          - "json"
+          - "html"
+          - "all"
+    
+    # Feature Capabilities
+    capabilities:
+      - "Automatic competitor detection using smart pattern recognition"
+      - "Context extraction with full surrounding discussion capture"
+      - "Sales response effectiveness scoring and categorization"
+      - "Win/loss correlation analysis with statistical insights"
+      - "Battle card generation with real customer feedback"
+      - "Individual and team coaching recommendations"
+      - "Product development insights from competitive gaps"
+      - "Counter-positioning strategy identification and templates"
+      - "Historical trend analysis across meeting types"
+      - "Multi-format export for CRM and tool integration"
+    
+    # Usage Examples
+    examples:
+      - description: "Analyze single meeting for competitor mentions"
+        command: '/competitive-intelligence meeting_identifier="Q4 Enterprise Sales Call"'
+      
+      - description: "Deep analysis with specific competitors over time"
+        command: '/competitive-intelligence date_range="2025-01-01 to 2025-08-31" competitors="Competitor A,Competitor B" analysis_depth=comprehensive'
+      
+      - description: "Quick pricing-focused analysis"
+        command: '/competitive-intelligence meeting_identifier="Product Demo" focus_areas=pricing analysis_depth=quick'
+      
+      - description: "Generate battle card updates from recent meetings"
+        command: '/competitive-intelligence date_range="2025-07-01 to 2025-08-31" generate_battlecard=yes output_format=all'
+    
+    # Output Structure
+    output:
+      files:
+        - "competitive-intelligence-report.md - Comprehensive analysis report"
+        - "battle-cards-update.md - Competitor profiles and positioning"
+        - "training-recommendations.md - Sales enablement guidance"
+        - "product-insights.md - Product development recommendations"
+        - "data.json - Raw analysis data (optional)"
+      location: "./competitive-intelligence-[date]/"
+    
+    # Performance Metrics
+    estimated_runtime: "3-10 minutes depending on scope"
+    complexity: "advanced"
+    
+    # Tags
+    tags:
+      - competitive-intelligence
+      - competitor-analysis
+      - sales-intelligence
+      - meeting-analysis
+      - battle-cards
+      - win-loss-analysis
+      - sales-enablement
+      - product-insights
+      - google-drive
+      - read-ai
+      - positioning
+      - differentiation
+      - coaching
+      - training
+    
+    # Status
+    status: "stable"
+    version: "1.0.0"
+    created: "2025-08-13"
+    last_updated: "2025-08-13"
+
+  - name: talk-ratio-analyzer
+    type: command
+    title: "Talk-to-Listen Ratio Analyzer"
+    description: "Advanced conversation dynamics analyzer that calculates talk-to-listen ratios from Read AI meeting transcripts, measures question effectiveness, segments by call type, and correlates patterns with deal outcomes to identify coaching opportunities."
+    category: sales-intelligence
+    commandName: "/talk-ratio-analyzer"
+    aiPlatform: "claude-code@2025.06"
+    content: "talk-ratio-analyzer/command.md"
+    readme: "talk-ratio-analyzer/README.md"
+    license: "MIT"
+    
+    # MCP Requirements
+    mcpRequirements:
+      - serverId: "google-docs-mcp"
+        tier: "required"
+        name: "Google Docs MCP"
+      - serverId: "zapier"
+        tier: "required"
+        name: "Zapier MCP"
+      - serverId: "filesystem"
+        tier: "required"
+        name: "Filesystem MCP"
+    
+    # Input Parameters
+    inputParameters:
+      - name: "meeting_identifier"
+        label: "Meeting Name or ID"
+        description: "Specific meeting to analyze from Read AI transcripts"
+        type: "text"
+        required: true
+        defaultValue: ""
+      
+      - name: "drive_folder"
+        label: "Google Drive Folder"
+        description: "Folder path containing Read AI meeting transcripts"
+        type: "text"
+        required: false
+        defaultValue: "AI Labs/Meeting Notes (Read AI)"
+      
+      - name: "date_range"
+        label: "Date Range"
+        description: "Date range for analyzing multiple meetings (YYYY-MM-DD to YYYY-MM-DD)"
+        type: "text"
+        required: false
+        defaultValue: ""
+      
+      - name: "rep_names"
+        label: "Sales Rep Names"
+        description: "Comma-separated list of sales reps to analyze"
+        type: "text"
+        required: false
+        defaultValue: ""
+      
+      - name: "call_types"
+        label: "Call Types"
+        description: "Types of calls to analyze (discovery, demo, negotiation, closing)"
+        type: "text"
+        required: false
+        defaultValue: "discovery,demo,negotiation,closing"
+      
+      - name: "analysis_mode"
+        label: "Analysis Mode"
+        description: "Type of analysis to perform"
+        type: "select"
+        required: false
+        defaultValue: "single"
+        options:
+          - "single"
+          - "comparative"
+          - "historical"
+      
+      - name: "question_analysis"
+        label: "Analyze Questions"
+        description: "Perform detailed question effectiveness analysis"
+        type: "select"
+        required: false
+        defaultValue: "yes"
+        options:
+          - "yes"
+          - "no"
+      
+      - name: "outcome_correlation"
+        label: "Correlate with Outcomes"
+        description: "Analyze correlation with deal outcomes"
+        type: "select"
+        required: false
+        defaultValue: "yes"
+        options:
+          - "yes"
+          - "no"
+      
+      - name: "coaching_report"
+        label: "Generate Coaching Report"
+        description: "Create detailed coaching recommendations"
+        type: "select"
+        required: false
+        defaultValue: "yes"
+        options:
+          - "yes"
+          - "no"
+      
+      - name: "output_format"
+        label: "Output Format"
+        description: "Format for the analysis report"
+        type: "select"
+        required: false
+        defaultValue: "markdown"
+        options:
+          - "markdown"
+          - "json"
+          - "html"
+    
+    # Feature Capabilities
+    capabilities:
+      - "Precise talk-to-listen ratio calculation (word count and time-based)"
+      - "Question effectiveness scoring (open vs closed, response length)"
+      - "Call type segmentation with optimal ratio benchmarks"
+      - "Deal outcome correlation and win rate analysis"
+      - "Individual rep performance tracking and comparison"
+      - "Top performer technique extraction and playbook generation"
+      - "Automated coaching recommendations with action plans"
+      - "Historical trend analysis and improvement tracking"
+      - "Multi-format export (markdown, JSON, HTML)"
+      - "Conversation flow and engagement pattern analysis"
+    
+    # Usage Examples
+    examples:
+      - description: "Analyze single meeting with full insights"
+        command: '/talk-ratio-analyzer meeting_identifier="Q4 Discovery Call - Enterprise"'
+      
+      - description: "Team comparison over time period"
+        command: '/talk-ratio-analyzer date_range="2025-01-01 to 2025-08-31" rep_names="John,Jane,Mike" analysis_mode=comparative'
+      
+      - description: "Historical analysis with outcome correlation"
+        command: '/talk-ratio-analyzer analysis_mode=historical outcome_correlation=yes coaching_report=yes'
+      
+      - description: "Quick single meeting check"
+        command: '/talk-ratio-analyzer meeting_identifier="Product Demo" question_analysis=no coaching_report=no'
+    
+    # Output Structure
+    output:
+      files:
+        - "report.md - Comprehensive talk-ratio analysis report"
+        - "coaching-recommendations.md - Personalized coaching plans"
+        - "top-performer-playbook.md - Best practices and techniques"
+        - "data.json - Raw analysis data (optional)"
+      location: "./talk-ratio-analysis-[date]/"
+    
+    # Performance Metrics
+    estimated_runtime: "2-5 minutes per meeting, 10-15 minutes for batch"
+    complexity: "medium"
+    
+    # Tags
+    tags:
+      - talk-to-listen-ratio
+      - conversation-dynamics
+      - sales-intelligence
+      - meeting-analysis
+      - coaching
+      - question-effectiveness
+      - google-drive
+      - read-ai
+      - performance-analytics
+      - best-practices
+      - outcome-correlation
+    
+    # Status
+    status: "stable"
+    version: "1.0.0"
+    created: "2025-08-13"
+    last_updated: "2025-08-13"
+
+  - name: objection-tracker
+    type: command
+    title: "Sales Objection Tracker & Analyzer"
+    description: "Advanced objection analysis tool that extracts, categorizes, and analyzes customer objections from Read AI sales meeting transcripts. Identifies patterns, measures resolution rates, compares rep strategies, and generates comprehensive playbooks with training recommendations."
+    category: sales-intelligence
+    commandName: "/objection-tracker"
+    aiPlatform: "claude-code@2025.06"
+    content: "objection-tracker/command.md"
+    readme: "objection-tracker/README.md"
+    license: "MIT"
+    
+    # MCP Requirements
+    mcpRequirements:
+      - serverId: "google-docs-mcp"
+        tier: "required"
+        name: "Google Docs MCP"
+      - serverId: "zapier"
+        tier: "required"
+        name: "Zapier MCP"
+      - serverId: "filesystem"
+        tier: "required"
+        name: "Filesystem MCP"
+    
+    # Input Parameters
+    inputParameters:
+      - name: "meeting_identifier"
+        label: "Meeting Name or ID"
+        description: "Specific meeting to analyze from Read AI transcripts"
+        type: "text"
+        required: true
+        defaultValue: ""
+      
+      - name: "drive_folder"
+        label: "Google Drive Folder"
+        description: "Folder path containing Read AI meeting transcripts"
+        type: "text"
+        required: false
+        defaultValue: "AI Labs/Meeting Notes (Read AI)"
+      
+      - name: "date_range"
+        label: "Date Range"
+        description: "Date range for analyzing multiple meetings (YYYY-MM-DD to YYYY-MM-DD)"
+        type: "text"
+        required: false
+        defaultValue: ""
+      
+      - name: "rep_names"
+        label: "Sales Rep Names"
+        description: "Comma-separated list of sales reps to analyze"
+        type: "text"
+        required: false
+        defaultValue: ""
+      
+      - name: "analysis_mode"
+        label: "Analysis Mode"
+        description: "Type of analysis to perform"
+        type: "select"
+        required: false
+        defaultValue: "single"
+        options:
+          - "single"
+          - "comparative"
+          - "historical"
+      
+      - name: "objection_focus"
+        label: "Objection Focus"
+        description: "Specific objection types to focus on (e.g., pricing, competition)"
+        type: "text"
+        required: false
+        defaultValue: ""
+      
+      - name: "output_format"
+        label: "Output Format"
+        description: "Format for the analysis report"
+        type: "select"
+        required: false
+        defaultValue: "markdown"
+        options:
+          - "markdown"
+          - "json"
+          - "html"
+      
+      - name: "generate_playbook"
+        label: "Generate Playbook"
+        description: "Create objection-handling playbook with best practices"
+        type: "select"
+        required: false
+        defaultValue: "yes"
+        options:
+          - "yes"
+          - "no"
+      
+      - name: "resolution_threshold"
+        label: "Resolution Threshold %"
+        description: "Minimum acceptable objection resolution rate"
+        type: "text"
+        required: false
+        defaultValue: "70"
+    
+    # Feature Capabilities
+    capabilities:
+      - "Automatic objection detection using keyword and pattern recognition"
+      - "6-category classification: Budget, Trust, Functionality, Competition, Timeline, Authority"
+      - "Severity scoring (1-5 scale) for prioritization"
+      - "Resolution rate calculation by type, rep, and strategy"
+      - "Comparative analysis across sales team members"
+      - "Response effectiveness measurement"
+      - "Best practice extraction from top performers"
+      - "Automated playbook generation with proven templates"
+      - "Individual and team training recommendations"
+      - "Historical pattern analysis and trend identification"
+      - "Deal outcome correlation with objection handling"
+      - "Export to multiple formats for sharing and integration"
+    
+    # Usage Examples
+    examples:
+      - description: "Analyze single meeting with playbook generation"
+        command: '/objection-tracker meeting_identifier="Q4 Sales Call - Enterprise Client" generate_playbook=yes'
+      
+      - description: "Compare rep performance over time period"
+        command: '/objection-tracker date_range="2025-01-01 to 2025-08-31" rep_names="John Smith,Jane Doe" analysis_mode=comparative'
+      
+      - description: "Focus on pricing and competition objections"
+        command: '/objection-tracker meeting_identifier="Product Demo" objection_focus="pricing,competition" resolution_threshold=80'
+      
+      - description: "Historical analysis with JSON export"
+        command: '/objection-tracker analysis_mode=historical output_format=json drive_folder="Sales/Transcripts"'
+    
+    # Output Structure
+    output:
+      files:
+        - "objection-analysis-report.md - Comprehensive analysis report"
+        - "objection-handling-playbook.md - Response templates and strategies"
+        - "training-recommendations.md - Personalized coaching plans"
+        - "objection-data.json - Raw data for integration (optional)"
+      location: "./objection-analysis-[date]/"
+    
+    # Performance Metrics
+    estimated_runtime: "3-8 minutes depending on scope"
+    complexity: "advanced"
+    
+    # Tags
+    tags:
+      - objection-handling
+      - sales-intelligence
+      - meeting-analysis
+      - coaching
+      - training
+      - google-drive
+      - read-ai
+      - playbook-generation
+      - performance-analytics
+      - best-practices
+    
+    # Status
+    status: "stable"
+    version: "1.0.0"
+    created: "2025-08-13"
+    last_updated: "2025-08-13"
