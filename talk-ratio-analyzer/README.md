@@ -304,4 +304,4 @@ MIT License. All rights reserved.
 
 ---
 
-*Copyright © 2025 AlphaPoint.com*
+*Copyright © 2025 AlphaPoint Corp.*

@@ -55,13 +55,13 @@ The Competitive Intelligence Analyzer is an advanced AI-powered tool that extrac
 1. **Claude Code with MCP Support**
 - Ensure you have Claude Code installed with MCP capabilities enabled
 
-2\. **Required MCP Servers**
+2. **Required MCP Servers**
 
 - `google-docs-mcp`: For accessing and reading Google Docs
 - `zapier`: For Google Drive integration
 - `filesystem`: For local file operations
 
-3\. **Google Drive Access**
+3. **Google Drive Access**
 
 - Access to the folder containing Read AI meeting transcripts
 - Proper authentication configured through Zapier MCP
@@ -319,4 +319,4 @@ MIT License. All rights reserved.
 
 ---
 
-*Copyright © 2025 AlphaPoint.com*
+*Copyright © 2025 AlphaPoint Corp.*
